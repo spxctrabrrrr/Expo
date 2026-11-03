@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expo Sistemas 2026</title>
+  <link rel="stylesheet" href="Ma2.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <a class="logo" href="#inicio">Expo<span>Sistemas</span></a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="menu" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+        </ul>
+        <a class="btn btn--primario" href="#registro">Registro</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero" id="agenda">
+      <div class="contenedor hero__contenido">
+        <div class="hero__texto">
+          <h1>Expo Sistemas 2026</h1>
+          <p>Muestra de proyectos de los alumnos de Ingeniería en Sistemas Computacionales.</p>
+          <div class="hero__botones">
+            <a class="btn btn--primario" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--contorno" href="#agenda">Agenda</a>
+          </div>
+        </div>
+        <figure class="paisaje paisaje--hero" role="img" aria-label="Ilustración de montañas moradas">
+          <span></span>
+        </figure>
+      </div>
+    </section>
+
+    <section class="seccion" id="proyectos">
+      <div class="contenedor">
+        <h2>Proyectos destacados</h2>
+        <div class="proyectos">
+
+          <article class="tarjeta">
+            <span class="etiqueta">Web</span>
+            <h3>Control escolar</h3>
+            <p>Registro de calificaciones y asistencia con reportes por grupo.</p>
+            <a class="btn btn--primario" href="#">Ver proyecto</a>
+          </article>
+
+          <article class="tarjeta">
+            <span class="etiqueta">Móvil</span>
+            <h3>Rutas de camión</h3>
+            <p>App que muestra las rutas del transporte urbano en tiempo real y avisa cuando tu camión está cerca.</p>
+            <a class="btn btn--primario" href="#">Ver proyecto</a>
+          </article>
+
+          <article class="tarjeta">
+            <span class="etiqueta">IoT</span>
+            <h3>Invernadero inteligente</h3>
+            <p>Sensores de humedad y temperatura conectados a un tablero.</p>
+            <a class="btn btn--primario" href="#">Ver proyecto</a>
+          </article>
+
+          <article class="tarjeta">
+            <span class="etiqueta">Datos</span>
+            <h3>Análisis de deserción</h3>
+            <p>Modelo que identifica alumnos en riesgo a partir de su historial.</p>
+            <a class="btn btn--primario" href="#">Ver proyecto</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="galeria">
+      <div class="contenedor">
+        <h2>Galería</h2>
+        <div class="galeria">
+          <figure class="paisaje g1 ancha"  role="img" aria-label="Montañas verdes"><span></span></figure>
+          <figure class="paisaje g2"        role="img" aria-label="Montañas oscuras"><span></span></figure>
+          <figure class="paisaje g3 alta"   role="img" aria-label="Montañas azules"><span></span></figure>
+          <figure class="paisaje g4"        role="img" aria-label="Montañas índigo"><span></span></figure>
+          <figure class="paisaje g5"        role="img" aria-label="Montañas rojizas"><span></span></figure>
+          <figure class="paisaje g6"        role="img" aria-label="Montañas rosadas"><span></span></figure>
+          <figure class="paisaje g7 ancha"  role="img" aria-label="Montañas arena"><span></span></figure>
+          <figure class="paisaje g8"        role="img" aria-label="Montañas verde menta"><span></span></figure>
+          <figure class="paisaje g9"        role="img" aria-label="Montañas al atardecer"><span></span></figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie" id="registro">
+    <div class="contenedor pie__contenido">
+      <p>© 2026 Expo Sistemas</p>
+      <ul class="pie__redes">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      const abierto = menu.classList.toggle('abierto');
+      toggle.setAttribute('aria-expanded', abierto);
+    });
+  </script>
+</body>
+</html>
